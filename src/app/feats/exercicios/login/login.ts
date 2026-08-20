@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { LoginInterface } from './login-interface';
 import { email, form, FormField, required } from '@angular/forms/signals';
+import { LoginService } from './login-service';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,8 @@ import { email, form, FormField, required } from '@angular/forms/signals';
   styleUrl: './login.css',
 })
 export class Login {
+
+  protected readonly loginService = inject(LoginService)
 
   protected loginModel = signal<LoginInterface>({
     email: '',
@@ -28,12 +31,23 @@ export class Login {
   protected efetuarLogin(event: SubmitEvent) {
     event.preventDefault();
 
-    alert('Foi feito o submit')
+
     const login = this.loginModel();
 
-    if (login.email === 'henrique@email.com' && login.senha === 'senha') {
-      this.estaLogado.set(true);
-    }
+    this.estaLogado.set (
+      this.loginService.autenticarUsuario(login)
+    )
+
+    // if (login.email === 'henrique@email.com' && login.senha === 'senha') {
+    //   this.estaLogado.set(true);
+    // }
+
+    this.loginModel.set({
+      email: '',
+      senha: ''
+  })
+
+    this.loginForm().reset()
 
   }
 
