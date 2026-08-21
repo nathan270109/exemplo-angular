@@ -1,0 +1,23 @@
+
+<h1>Formulario de requisição da API</h1>
+
+<form (submit)="cadastrarUsuario($event)">
+
+    <h2>ID</h2>
+    <div class="input-text"> 
+        <input type="text" placeholder="Insira seu ID..." [formField]="alunoForm.userId">
+    </div>
+
+    <h2>Título</h2>
+    <div class="input-text"> 
+        <input type="text" placeholder="Título..." [formField]="alunoForm.title">
+    </div>
+
+    <h2>Texto</h2>
+    <div class="input-text"> 
+        <input type="text" placeholder="Insira o Texto..." [formField]="alunoForm.body">
+    </div>
+
+    <button>Cadastrar</button>
+
+</form>

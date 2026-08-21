@@ -6,10 +6,11 @@ import { ExemploSignal } from "./exemplo-signal/exemplo-signal";
 import { ArrayUsuarios } from "./array-usuarios/array-usuarios";
 import { Login } from "./login/login";
 import { CadastroAlunos } from "./cadastro-alunos/cadastro-alunos";
+import { FormularioApi } from './formulario-api/formulario-api';
 
 @Component({
   selector: 'app-exercicios',
-  imports: [Contador, Autenticacao, ImagemDinamica, ExemploSignal, ArrayUsuarios, Login, CadastroAlunos],
+  imports: [Contador, Autenticacao, ImagemDinamica, ExemploSignal, ArrayUsuarios, Login, CadastroAlunos, FormularioApi],
   templateUrl: './exercicios.html',
   styleUrl: './exercicios.css',
 })

@@ -9,7 +9,7 @@ import { CadastroAlunosService } from './cadastro-alunos-service';
   templateUrl: './cadastro-alunos.html',
   styleUrl: './cadastro-alunos.css',
 })
-export class CadastroAlunos {
+export class CadastroAlunos { 
 
 
   protected readonly servicoCerto = inject(CadastroAlunosService);

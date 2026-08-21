@@ -2,7 +2,7 @@ import { Service, signal } from '@angular/core';
 import { Aluno } from './aluno';
 
 @Service()
-export class CadastroAlunosService {
+export class CadastroAlunosService { 
 
     alunos = signal<Aluno[]>([]);
 
