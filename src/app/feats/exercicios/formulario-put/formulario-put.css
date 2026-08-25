@@ -1,0 +1,95 @@
+/* Reset básico e tipografia */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121214;
+  color: #e1e1e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Título principal fora do formulário */
+h2:first-child {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00875f;
+  font-size: 1.8rem;
+}
+
+/* Estilo do formulário */
+form {
+  background-color: #202024;
+  padding: 32px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Títulos/Labels dos campos (h2 dentro do form) */
+form h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #c4c4cc;
+  margin-bottom: -8px; /* Reduz espaçamento em relação ao campo */
+}
+
+/* Container do input */
+.input-text {
+  width: 100%;
+}
+
+/* Estilização dos campos de texto */
+.input-text input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #29292e;
+  background-color: #121214;
+  color: #e1e1e6;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-text input[type="text"]:focus {
+  border-color: #00875f;
+  box-shadow: 0 0 0 2px rgba(0, 135, 95, 0.3);
+}
+
+.input-text input[type="text"]::placeholder {
+  color: #7c7c8a;
+}
+
+/* Estilização do botão */
+button {
+  margin-top: 12px;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00875f;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #00b37e;
+}
+
+button:active {
+  transform: scale(0.98);
+}

@@ -3,15 +3,14 @@ import { inject, Service } from '@angular/core';
 import { Usuario } from './usuario';
 
 @Service()
-export class FormularioApiService {
+export class ServiceForm {
 
     private readonly httpClient = inject(HttpClient);
 
     private readonly urlApi = 'https://jsonplaceholder.typicode.com/posts';
-    
-    cadastrarPostDoService(usuarioCadastrado: Usuario) {
-        return this.httpClient.post(this.urlApi, usuarioCadastrado)
-    }
 
+    updatePutDoService(usuarioUpdate: Usuario) {
+        return this.httpClient.put(this.urlApi, usuarioUpdate);
+    }
 
 }

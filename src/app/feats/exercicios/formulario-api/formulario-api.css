@@ -5,7 +5,7 @@ h1 {
   font-family: system-ui, -apple-system, sans-serif;
   margin-top: 32px;
   margin-bottom: 8px;
-}
+} 
 
 form {
   max-width: 440px;
@@ -50,4 +50,29 @@ form h2 {
 
 .input-text input::placeholder {
   color: #9ca3af;
+}
+
+/* Estilo do Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 24px;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito ao Passar o Mouse no Botão */
+button:hover {
+  background-color: #357abd;
+}
+
+/* Efeito ao Clicar no Botão */
+button:active {
+  transform: scale(0.98);
 }
