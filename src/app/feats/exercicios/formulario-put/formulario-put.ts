@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { ServiceForm } from './service-form';
+import { ServiceForm } from '../services/put/service-form';
 import { Usuario } from './usuario';
 import { form, FormField } from '@angular/forms/signals';
 
@@ -12,7 +12,7 @@ import { form, FormField } from '@angular/forms/signals';
 export class FormularioPut {
 
   protected readonly serviceFormulario = inject(ServiceForm);
-
+ 
   protected usuarioModel = signal<Usuario>({
     id: null,
     userId: null,
@@ -24,33 +24,24 @@ export class FormularioPut {
 
   //////////////////////
 
-  protected updateFormulario(event: SubmitEvent) {
+  protected atualizarPost(event: SubmitEvent) {
     event.preventDefault();
 
-    const put = this.usuarioModel();
-
-    console.log(put, 'Alterado');
-
-    this.serviceFormulario.updatePutDoService(put).subscribe({
+    this.serviceFormulario.atualizarPost(this.usuarioModel()).subscribe({
       next: () => {
+        alert('Atualização Concluida');
+
         this.usuarioModel.set({
           id: null,
           userId: null,
           title: '',
           body: ''
-        });
-
+        })
         this.usuarioForm().reset();
       },
-
       error: () => {
-        console.log('Algo deu errado')
+        alert('Algo deu errado')
       }
-
     })
-
-
   }
-
-
 }

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ServiceForm } from './service-form';
+import { ServiceForm } from '../posts/services/service-form';
 
 describe('ServiceForm', () => {
   let service: ServiceForm;

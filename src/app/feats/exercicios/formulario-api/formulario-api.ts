@@ -1,8 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
-import { FormularioApiService } from './formulario-api-service';
+
 import { Usuario } from './usuario';
 import { CadastroAlunosService } from '../cadastro-alunos/cadastro-alunos-service';
+import { FormularioApiService } from '../services/post/formulario-api-service';
 
 @Component({
   selector: 'app-formulario-api',
@@ -29,10 +30,13 @@ export class FormularioApi {
 
     const post = this.usuarioModel();
 
-    console.log(post, "cadastrado");
+    
 
     this.servicoFormulario.cadastrarPostDoService(post).subscribe({
       next: () => {
+
+        console.log("cadastrado");
+
         this.usuarioModel.set({
           userId: null,
           title: '',

@@ -1,8 +1,33 @@
-.habilitado {
-    border: 3px solid green;
+/* Estilo base do botão */
+button {
+    margin: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.nao-habilitado {
-        border: 3px solid red;
+/* Classe aplicada quando habilitado (!naoHabilitado) */
+button.habilitado {
+  background-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
 
+button.habilitado:hover {
+  background-color: #059669;
+}
+
+button.habilitado:active {
+  transform: scale(0.98);
+}
+
+/* Classe aplicada quando desabilitado (naoHabilitado) */
+button.nao-habilitado {
+  background: #b65e3b;
+  color: #eceff5;
+  box-shadow: none;
 }

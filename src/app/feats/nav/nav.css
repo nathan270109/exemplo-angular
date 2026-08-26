@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 24px;
+  background-color: #478857;
+  border-bottom: 1px solid #29292e;
+}
+
+nav a {
+  color: #e1e1e6;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background-color: #22412b;
+  color: #f9fcfb;
+}
+
+/* Estilo para quando a rota do Angular estiver ativa */
+nav a.active,
+nav a.router-link-active {
+  color: #ffffff;
+  background-color: rgba(0, 135, 95, 0.1);
+}

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Footer } from './footer';
+import { FormularioDelete } from './formulario-delete';
 
-describe('Footer', () => {
-  let component: Footer;
-  let fixture: ComponentFixture<Footer>;
+describe('FormularioDelete', () => {
+  let component: FormularioDelete;
+  let fixture: ComponentFixture<FormularioDelete>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Footer],
+      imports: [FormularioDelete],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Footer);
+    fixture = TestBed.createComponent(FormularioDelete);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

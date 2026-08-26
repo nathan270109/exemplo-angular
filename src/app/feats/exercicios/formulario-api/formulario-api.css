@@ -1,7 +1,7 @@
 /* Estilo para o título principal fora/acima do formulário */
 h1 {
   text-align: center;
-  color: #1f2937;
+  color: #0d1a0f;
   font-family: system-ui, -apple-system, sans-serif;
   margin-top: 32px;
   margin-bottom: 8px;
@@ -22,7 +22,7 @@ form {
 form h2 {
   font-size: 14px;
   font-weight: 600;
-  color: #374151;
+  color: #375140;
   margin: 12px 0 6px 0;
   font-family: system-ui, -apple-system, sans-serif;
 }
@@ -44,8 +44,8 @@ form h2 {
 }
 
 .input-text input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  border-color: #25eb35;
+  box-shadow: 0 0 0 3px rgba(37, 235, 70, 0.2);
 }
 
 .input-text input::placeholder {
@@ -57,7 +57,7 @@ button {
   width: 100%;
   padding: 12px;
   margin-top: 24px;
-  background-color: #4a90e2;
+  background-color: #38813e;
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -69,7 +69,7 @@ button {
 
 /* Efeito ao Passar o Mouse no Botão */
 button:hover {
-  background-color: #357abd;
+  background-color: #35bd4c;
 }
 
 /* Efeito ao Clicar no Botão */

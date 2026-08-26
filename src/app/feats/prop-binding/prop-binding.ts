@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class PropBinding {
 
-  naoHabilitado = false;
+  protected naoHabilitado: boolean = false;
+
+  protected alterarEstado() {
+    this.naoHabilitado = !this.naoHabilitado;
+  }
 
 }

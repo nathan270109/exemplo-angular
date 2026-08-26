@@ -1,0 +1,60 @@
+/* Título de instrução */
+.bind {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+h2 {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Campo de digitação */
+input[ngModel],
+input {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Card com as informações do usuário */
+p {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 320px;
+  margin-top: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Foto do perfil */
+p img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 12px auto;
+  border: 3px solid #3b82f6;
+}
