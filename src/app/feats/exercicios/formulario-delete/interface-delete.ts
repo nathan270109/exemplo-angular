@@ -1,5 +1,5 @@
 export interface InterfaceDelete {
 
-    id: number | null
+    id: number | null;
 
 }

@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Services } from './services';
+import { MetodoGet } from './metodo-get';
 
-describe('Services', () => {
-  let component: Services;
-  let fixture: ComponentFixture<Services>;
+describe('MetodoGet', () => {
+  let component: MetodoGet;
+  let fixture: ComponentFixture<MetodoGet>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Services],
+      imports: [MetodoGet],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Services);
+    fixture = TestBed.createComponent(MetodoGet);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

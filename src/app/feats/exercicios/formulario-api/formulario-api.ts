@@ -1,9 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
+import { ServiceApi } from '../../services/service-api';
+import { PostUsuario } from './post-usuario';
 
-import { Usuario } from './usuario';
-import { CadastroAlunosService } from '../cadastro-alunos/cadastro-alunos-service';
-import { FormularioApiService } from '../services/post/formulario-api-service';
+
 
 @Component({
   selector: 'app-formulario-api',
@@ -13,9 +13,10 @@ import { FormularioApiService } from '../services/post/formulario-api-service';
 })
 export class FormularioApi {
 
-  protected readonly servicoFormulario = inject(FormularioApiService);
+  protected readonly servicoFormulario = inject(ServiceApi);
 
-  protected usuarioModel = signal<Usuario>({
+  protected usuarioModel = signal<PostUsuario>({
+    id: null,
     userId: null,
     title: '', 
     body: ''
@@ -35,9 +36,10 @@ export class FormularioApi {
     this.servicoFormulario.cadastrarPostDoService(post).subscribe({
       next: (PostUsuario) => {
 
-        console.log("cadastrado" + PostUsuario.id);
+        console.log("cadastrado" + PostUsuario);
 
         this.usuarioModel.set({
+          id: null,
           userId: null,
           title: '',
           body: '',

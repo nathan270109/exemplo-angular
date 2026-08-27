@@ -1,7 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { InterfaceDelete } from './interface-delete';
 import { form, FormField } from '@angular/forms/signals';
-import { ServiceDelete } from '../services/delete/service-delete';
+import { ServiceApi } from '../../services/service-api';
+
 
 @Component({
   selector: 'app-formulario-delete',
@@ -11,7 +12,7 @@ import { ServiceDelete } from '../services/delete/service-delete';
 })
 export class FormularioDelete {
 
-  protected readonly serviceDeletePost = inject(ServiceDelete);
+  protected readonly serviceDeletePost = inject(ServiceApi);
   
   protected interfaceModel = signal<InterfaceDelete>({
     id: null
@@ -24,7 +25,7 @@ export class FormularioDelete {
   protected usuarioDelete(event: SubmitEvent){
     event.preventDefault();
 
-    this.serviceDeletePost.deletarPostService(this.interfaceModel()).subscribe({
+    this.serviceDeletePost.deletarPost(this.interfaceModel().id!).subscribe({
       next: () => {
         alert('Post Deletado');
 

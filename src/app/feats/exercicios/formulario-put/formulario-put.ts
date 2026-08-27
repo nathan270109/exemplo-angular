@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { ServiceForm } from '../services/put/service-form';
-import { Usuario } from './usuario';
+import { UsuarioPut } from './usuario-put';
 import { form, FormField } from '@angular/forms/signals';
+import { ServiceApi } from '../../services/service-api';
 
 @Component({
   selector: 'app-formulario-put',
@@ -11,9 +11,9 @@ import { form, FormField } from '@angular/forms/signals';
 })
 export class FormularioPut {
 
-  protected readonly serviceFormulario = inject(ServiceForm);
+  protected readonly serviceFormulario = inject(ServiceApi);
  
-  protected usuarioModel = signal<Usuario>({
+  protected usuarioModel = signal<UsuarioPut>({
     id: null,
     userId: null,
     title: '',
@@ -28,8 +28,8 @@ export class FormularioPut {
     event.preventDefault();
 
     this.serviceFormulario.atualizarPost(this.usuarioModel()).subscribe({
-      next: () => {
-        alert('Atualização Concluida');
+      next: (response) => {
+        alert('Atualização deu certo para a id' + response.id);
 
         this.usuarioModel.set({
           id: null,

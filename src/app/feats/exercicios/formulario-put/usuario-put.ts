@@ -1,4 +1,4 @@
-export interface Usuario {
+export interface UsuarioPut {
 
     id: number | null;
     userId: number | null;
