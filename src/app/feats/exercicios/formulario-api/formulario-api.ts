@@ -33,9 +33,9 @@ export class FormularioApi {
     
 
     this.servicoFormulario.cadastrarPostDoService(post).subscribe({
-      next: () => {
+      next: (PostUsuario) => {
 
-        console.log("cadastrado");
+        console.log("cadastrado" + PostUsuario.id);
 
         this.usuarioModel.set({
           userId: null,

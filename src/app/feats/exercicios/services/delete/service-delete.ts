@@ -8,7 +8,7 @@ export class ServiceDelete {
 
     private readonly urlApi = 'https://jsonplaceholder.typicode.com/posts'
 
-    deletarPostService(postDeletado: InterfaceDelete) {
-        return this.httpClient.delete(this.urlApi + '/' + postDeletado.id);
+    deletarPostService(id: number) {
+        return this.httpClient.delete(this.urlApi + '/' + id);
     }
 }
