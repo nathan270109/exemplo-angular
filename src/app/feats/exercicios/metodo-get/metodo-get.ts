@@ -9,4 +9,6 @@ import { ServiceApi } from '../../services/service-api';
 })
 export class MetodoGet {
    protected readonly consumoService = inject(ServiceApi);
+
+  
 }
