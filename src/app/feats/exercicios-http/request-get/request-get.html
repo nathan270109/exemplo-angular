@@ -1,0 +1,42 @@
+<h1>Requisição GET</h1>
+
+<button (click)="requestService.userDetails.reload()">Recarregar</button>
+
+@if (requestService.userDetails.isLoading()) {
+<div class="status-loading">
+    <div class="spinner"></div>
+    <p>Carregando usuários...</p>
+</div>
+} @else if (requestService.userDetails.error()) {
+<div class="status-error">
+    <p>Ops! Ocorreu um erro ao carregar os dados.</p>
+</div>
+} @else if (requestService.userDetails.hasValue()) {
+
+<div class="container-colunas">
+    @for (listUsersForm of requestService.userDetails.value(); track listUsersForm.id) {
+    <article class="card-usuario">
+        <header class="card-header">
+            <h2>{{ listUsersForm.name }}</h2>
+            <span class="username">@{{ listUsersForm.username }}</span>
+        </header>
+
+        <div class="card-body">
+            <div class="info-item">
+                <span class="label">ID</span>
+                <span class="valor">{{ listUsersForm.id }}</span>
+            </div>
+            <div class="info-item">
+                <span class="label">E-mail</span>
+                <span class="valor">{{ listUsersForm.email }}</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Telefone</span>
+                <span class="valor">{{ listUsersForm.phone }}</span>
+            </div>
+        </div>
+    </article>
+    }
+</div>
+
+}

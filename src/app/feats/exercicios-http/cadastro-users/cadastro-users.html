@@ -1,0 +1,34 @@
+<div class="html">
+
+    <form (submit)="cadastrarUsuario($event)">
+
+        <h2>Id</h2>
+        <div class="input-text">  
+            <input type="text" placeholder="Insira seu ID..." [formField]="usuarioForm.id">
+        </div>
+    
+        <h2>Name</h2>
+        <div class="input-text"> 
+            <input type="text" placeholder="Nome..." [formField]="usuarioForm.name">
+        </div>
+    
+        <h2>User name</h2> 
+        <div class="input-text"> 
+            <input type="text" placeholder="Insira um username..." [formField]="usuarioForm.username">
+        </div>
+    
+        <h2>Email</h2> 
+        <div class="input-text"> 
+            <input type="email" placeholder="Insira seu email..." [formField]="usuarioForm.email">
+        </div>
+
+        <h2>Phone</h2> 
+        <div class="input-text"> 
+            <input type="number" placeholder="(00) 0000-0000" [formField]="usuarioForm.phone">
+        </div>
+    
+        <button>Cadastrar</button>
+    
+    </form>
+
+</div>

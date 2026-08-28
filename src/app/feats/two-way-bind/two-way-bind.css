@@ -2,7 +2,9 @@
 .bind {
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin-left: 70px;
+    margin-top: 110px;
+
 }
 
 h2 {

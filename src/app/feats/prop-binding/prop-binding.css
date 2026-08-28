@@ -1,6 +1,7 @@
 /* Estilo base do botão */
 button {
-    margin: 30px;
+    margin-left: 40px;
+    margin-top: 90px;
     padding: 12px 24px;
     font-size: 16px;
     font-weight: 600;

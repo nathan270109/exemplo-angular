@@ -7,7 +7,7 @@ import { PostResponse } from '../exercicios/metodo-get/post-response';
 @Service()
 export class ServiceApi {
 
-   private readonly httpClient = inject(HttpClient);
+   private readonly httpClient = inject(HttpClient); 
 
     private readonly urlApi = 'https://jsonplaceholder.typicode.com/posts';
 

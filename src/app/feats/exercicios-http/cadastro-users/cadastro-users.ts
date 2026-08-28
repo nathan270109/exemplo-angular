@@ -1,25 +1,24 @@
 import { Component, inject, signal } from '@angular/core';
+import { UserService } from '../user-service';
 import { form, FormField } from '@angular/forms/signals';
-import { ServiceApi } from '../../services/service-api';
-import { PostUsuario } from './post-usuario';
-
-
+import { Users } from './users';
 
 @Component({
-  selector: 'app-formulario-api',
+  selector: 'app-cadastro-users',
   imports: [FormField],
-  templateUrl: './formulario-api.html',
-  styleUrl: './formulario-api.css',
-}) 
-export class FormularioApi {
+  templateUrl: './cadastro-users.html',
+  styleUrl: './cadastro-users.css',
+})
+export class CadastroUsers {
 
-  protected readonly servicoFormulario = inject(ServiceApi);
+  protected readonly servicoFormulario = inject(UserService);
 
-  protected usuarioModel = signal<PostUsuario>({
+  protected usuarioModel = signal<Users>({
     id: null,
-    userId: null,
-    title: '', 
-    body: ''
+    name: '',
+    username: '', 
+    email: '',
+    phone: null
   });
 
   protected usuarioForm = form(this.usuarioModel);
@@ -34,15 +33,16 @@ export class FormularioApi {
     
 
     this.servicoFormulario.cadastrarPostDoService(post).subscribe({
-      next: (PostUsuario) => {
+      next: (users) => {
 
-        console.log("cadastrado" + PostUsuario);
+        console.log("cadastrado" + users);
 
         this.usuarioModel.set({
           id: null,
-          userId: null,
-          title: '',
-          body: '',
+          name: '',
+          username: '', 
+          email: '',
+          phone: null
         });
 
         this.usuarioForm().reset();
