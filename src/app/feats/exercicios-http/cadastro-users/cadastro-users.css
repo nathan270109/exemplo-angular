@@ -1,101 +1,94 @@
-/* Container principal com a classe "html" */
+
 .html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8fafc;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    padding: 20px;
-    margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  padding: 20px;
+  margin-top: 100px;
+}
+  
+form {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
   }
   
-  /* Card do Formulário */
-  form {
-    background: #ffffff;
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    width: 100%;
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
-  }
+form h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin: 16px 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
   
-  /* Rótulos dos campos (seus <h2>) */
-  form h2 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #334155;
-    margin: 16px 0 6px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+form h2:first-of-type {
+  margin-top: 0;
+}
   
-  /* Remove a margem superior do primeiro título */
-  form h2:first-of-type {
-    margin-top: 0;
-  }
+.input-text {
+  width: 100%;
+}
   
-  /* Container do input */
-  .input-text {
-    width: 100%;
-  }
+.input-text input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #213b1e;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
   
-  /* Inputs de texto, e-mail e número */
-  .input-text input {
-    width: 100%;
-    padding: 10px 14px;
-    font-size: 14px;
-    color: #213b1e;
-    background-color: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    box-sizing: border-box;
-    outline: none;
-    transition: all 0.2s ease;
-  }
+.input-text input::placeholder {
+  color: #94a3b8;
+}
   
-  .input-text input::placeholder {
-    color: #94a3b8;
-  }
+.input-text input:focus {
+  border-color: #2ca328;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.input-text input[type="number"]::-webkit-outer-spin-button,
+.input-text input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
   
-  .input-text input:focus {
-    border-color: #2ca328;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
-  }
+.input-text input[type="number"] {
+  -moz-appearance: textfield;
+}
   
-  /* Remove as setinhas padrão do input do tipo number */
-  .input-text input[type="number"]::-webkit-outer-spin-button,
-  .input-text input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+form button {
+  margin-top: 24px;
+  width: 100%;
+  background-color: #179e2d;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
   
-  .input-text input[type="number"] {
-    -moz-appearance: textfield;
-  }
+form button:hover {
+  background-color: #105f0d;
+}
   
-  /* Botão Cadastrar */
-  form button {
-    margin-top: 24px;
-    width: 100%;
-    background-color: #179e2d;
-    color: #ffffff;
-    border: none;
-    padding: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-  }
-  
-  form button:hover {
-    background-color: #105f0d;
-  }
-  
-  form button:active {
-    transform: scale(0.99);
-  }
+form button:active {
+  transform: scale(0.99);
+}
